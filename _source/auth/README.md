@@ -1,9 +1,5 @@
 # Login API 接口文档
 
-## 概述
-
-本文档描述了用户登录认证接口的使用方法。该接口基于 XenForo 论坛系统的认证 API，提供用户身份验证功能。
-
 ## 基础信息
 
 - **接口地址**: `https://auth.hvhbbs.cc/?action=login`
