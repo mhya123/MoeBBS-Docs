@@ -7,7 +7,7 @@
 
 ### 接口地址
 ```
-https://api.hvhbbs.cc/index.php
+https://api.hvhbbs.cc/
 ```
 
 ### 请求方式
@@ -27,7 +27,7 @@ https://api.hvhbbs.cc/index.php
 
 **请求 URL**:
 ```
-GET /index.php?action=get_thread&thread_id={thread_id}
+GET /?action=get_thread&thread_id={thread_id}
 ```
 
 **请求参数**:
@@ -39,15 +39,15 @@ GET /index.php?action=get_thread&thread_id={thread_id}
 **请求示例**:
 ```bash
 # cURL 示例
-curl -X GET "https://api.hvhbbs.cc/index.php?action=get_thread&thread_id=123"
+curl -X GET "https://api.hvhbbs.cc/?action=get_thread&thread_id=123"
 
 # JavaScript fetch 示例
-fetch('https://api.hvhbbs.cc/index.php?action=get_thread&thread_id=123')
+fetch('https://api.hvhbbs.cc/?action=get_thread&thread_id=123')
   .then(response => response.json())
   .then(data => console.log(data));
 
 # PHP 示例
-$url = 'https://api.hvhbbs.cc/index.php?action=get_thread&thread_id=123';
+$url = 'https://api.hvhbbs.cc/?action=get_thread&thread_id=123';
 $response = file_get_contents($url);
 $data = json_decode($response, true);
 ```
@@ -82,7 +82,7 @@ $data = json_decode($response, true);
 
 **请求 URL**:
 ```
-GET /index.php?action=get_resource_version&resource_version_id={version_id}
+GET /?action=get_resource_version&resource_version_id={version_id}
 ```
 
 **请求参数**:
@@ -94,16 +94,16 @@ GET /index.php?action=get_resource_version&resource_version_id={version_id}
 **请求示例**:
 ```bash
 # cURL 示例
-curl -X GET "https://api.hvhbbs.cc/index.php?action=get_resource_version&resource_version_id=456"
+curl -X GET "https://api.hvhbbs.cc/?action=get_resource_version&resource_version_id=456"
 
 # JavaScript fetch 示例
-fetch('https://api.hvhbbs.cc/index.php?action=get_resource_version&resource_version_id=456')
+fetch('https://api.hvhbbs.cc/?action=get_resource_version&resource_version_id=456')
   .then(response => response.json())
   .then(data => console.log(data));
 
 # Python requests 示例
 import requests
-response = requests.get('https://api.hvhbbs.cc/index.php?action=get_resource_version&resource_version_id=456')
+response = requests.get('https://api.hvhbbs.cc/?action=get_resource_version&resource_version_id=456')
 data = response.json()
 ```
 
@@ -135,7 +135,7 @@ data = response.json()
 
 **请求 URL**:
 ```
-GET /index.php?action=find_user_by_email&email={email}
+GET /?action=find_user_by_email&email={email}
 ```
 
 **请求参数**:
@@ -147,17 +147,17 @@ GET /index.php?action=find_user_by_email&email={email}
 **请求示例**:
 ```bash
 # cURL 示例
-curl -X GET "https://api.hvhbbs.cc/index.php?action=find_user_by_email&email=user@example.com"
+curl -X GET "https://api.hvhbbs.cc/?action=find_user_by_email&email=user@example.com"
 
 # JavaScript fetch 示例（注意 URL 编码）
 const email = encodeURIComponent('user@example.com');
-fetch(`https://api.hvhbbs.cc/index.php?action=find_user_by_email&email=${email}`)
+fetch(`https://api.hvhbbs.cc/?action=find_user_by_email&email=${email}`)
   .then(response => response.json())
   .then(data => console.log(data));
 
 # Java 示例
 String email = URLEncoder.encode("user@example.com", "UTF-8");
-String url = "https://api.hvhbbs.cc/index.php?action=find_user_by_email&email=" + email;
+String url = "https://api.hvhbbs.cc/?action=find_user_by_email&email=" + email;
 // 使用 HttpClient 发送请求
 ```
 
@@ -191,7 +191,7 @@ String url = "https://api.hvhbbs.cc/index.php?action=find_user_by_email&email=" 
 
 **请求 URL**:
 ```
-POST /index.php?action=
+POST /?action=
 ```
 
 **请求头**:
@@ -212,12 +212,12 @@ Content-Type: application/x-www-form-urlencoded
 **请求示例**:
 ```bash
 # cURL 示例
-curl -X POST "https://api.hvhbbs.cc/index.php?action=" \
+curl -X POST "https://api.hvhbbs.cc/?action=" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "to_user_id=123&alert=您有新的消息&from_user_id=456&link_url=https://example.com&link_title=查看详情"
 
 # JavaScript fetch 示例
-fetch('https://api.hvhbbs.cc/index.php?action=', {
+fetch('https://api.hvhbbs.cc/?action=', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded',
@@ -251,7 +251,7 @@ $options = [
 ];
 
 $context = stream_context_create($options);
-$result = file_get_contents('https://api.hvhbbs.cc/index.php?action=', false, $context);
+$result = file_get_contents('https://api.hvhbbs.cc/?action=', false, $context);
 $response = json_decode($result, true);
 ```
 
@@ -424,9 +424,9 @@ class ApiCache {
                 "method": "GET",
                 "header": [],
                 "url": {
-                    "raw": "https://api.hvhbbs.cc/index.php?action=get_thread&thread_id=123",
+                    "raw": "https://api.hvhbbs.cc/?action=get_thread&thread_id=123",
                     "host": ["api", "hvhbbs", "cc"],
-                    "path": ["index.php"],
+                    "path": [""],
                     "query": [
                         {"key": "action", "value": "get_thread"},
                         {"key": "thread_id", "value": "123"}
@@ -443,7 +443,7 @@ class ApiCache {
 #!/bin/bash
 # test_api.sh
 
-BASE_URL="https://api.hvhbbs.cc/index.php"
+BASE_URL="https://api.hvhbbs.cc/"
 
 echo "Testing Get Thread API..."
 curl -s "$BASE_URL?action=get_thread&thread_id=123" | jq .
