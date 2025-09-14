@@ -147,16 +147,16 @@ GET /?action=find_user_by_email&email={email}
 **请求示例**:
 ```bash
 # cURL 示例
-curl -X GET "https://api.hvhbbs.cc/?action=find_user_by_email&email=user@example.com"
+curl -X GET "https://api.hvhbbs.cc/?action=find_user_by_email&email=tuder1218@gmail.com"
 
 # JavaScript fetch 示例（注意 URL 编码）
-const email = encodeURIComponent('user@example.com');
+const email = encodeURIComponent('tuder1218@gmail.com');
 fetch(`https://api.hvhbbs.cc/?action=find_user_by_email&email=${email}`)
   .then(response => response.json())
   .then(data => console.log(data));
 
 # Java 示例
-String email = URLEncoder.encode("user@example.com", "UTF-8");
+String email = URLEncoder.encode("tuder1218@gmail.com", "UTF-8");
 String url = "https://api.hvhbbs.cc/?action=find_user_by_email&email=" + email;
 // 使用 HttpClient 发送请求
 ```
@@ -449,7 +449,7 @@ echo "Testing Get Thread API..."
 curl -s "$BASE_URL?action=get_thread&thread_id=123" | jq .
 
 echo "Testing Find User API..."
-curl -s "$BASE_URL?action=find_user_by_email&email=test@example.com" | jq .
+curl -s "$BASE_URL?action=find_user_by_email&email=tuder1218@gmail.com" | jq .
 
 echo "Testing Send Alert API..."
 curl -s -X POST "$BASE_URL?action=" \
@@ -457,6 +457,28 @@ curl -s -X POST "$BASE_URL?action=" \
   -d "to_user_id=123&alert=Test message" | jq .
 ```
 
+```BASH
+# test_api.bat
+
+@echo off
+set BASE_URL=https://api.hvhbbs.cc/
+
+echo Testing Get Thread API...
+curl -s "%BASE_URL%?action=get_thread&thread_id=123"
+echo.
+
+echo Testing Find User API...
+curl -s "%BASE_URL%?action=find_user_by_email&email=tuder1218@gmail.com"
+echo.
+
+echo Testing Send Alert API...
+curl -s -X POST "%BASE_URL%?action=" ^
+  -H "Content-Type: application/x-www-form-urlencoded" ^
+  -d "to_user_id=123&alert=Test message"
+echo.
+pause
+
+```
 ---
 
 ## 常见问题
