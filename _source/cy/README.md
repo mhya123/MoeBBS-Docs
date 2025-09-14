@@ -169,7 +169,7 @@ String url = "https://api.hvhbbs.cc/?action=find_user_by_email&email=" + email;
     "data": {
         "user_id": 123,
         "username": "username",
-        "email": "user@example.com",
+        "email": "tuder1218@gmail.com",
         "register_date": 1234567890,
         "last_activity": 1694678400,
         "message_count": 50,
