@@ -5,4 +5,5 @@
   * [Auth接口](_source/auth/README.md)
   * [QRCODE接口](_source/QRCODE/README.md)
   * [一言接口](_source/yy/README.md)
+  * [MoeBBS-Rss](_source/rss/README.md)
   * [jm下载BOT](_source/jm-dc/README.md)
