@@ -11,7 +11,11 @@
 | `/validate` | GET | 验证RSS URL有效性 | 无 |
 
 ---
+## API 地址
 
+```
+GET https://rss-api.hvhbbs.cc
+```
 ##  API 详细说明
 
 ### 1. MoeBBS 论坛 RSS 
