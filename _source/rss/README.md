@@ -14,7 +14,7 @@
 ## API 地址
 
 ```
-GET https://rss-api.hvhbbs.cc
+GET https://rss-api.mahiro.work
 ```
 ##  API 详细说明
 
@@ -84,7 +84,7 @@ interface RSSValidationResponse {
 ```javascript
 // 基础请求类
 class RSSApiClient {
-  constructor(baseUrl = 'http://rss-api.hvhbbs.cc') {
+  constructor(baseUrl = 'http://rss-api.mahiro.work') {
     this.baseUrl = baseUrl;
   }
 
@@ -146,7 +146,7 @@ import requests
 from typing import Optional, Dict, Any
 
 class RSSApiClient:
-    def __init__(self, base_url: str = "http://rss-api.hvhbbs.cc"):
+    def __init__(self, base_url: str = "http://rss-api.mahiro.work"):
         self.base_url = base_url
         self.session = requests.Session()
     
@@ -200,7 +200,7 @@ if __name__ == "__main__":
             print()
     
     # 验证RSS URL
-    validation = api.validate_rss_url("https://www.hvhbbs.cc/forums/-/index.rss")
+    validation = api.validate_rss_url("https://www.hvhbbs.de/forums/-/index.rss")
     print(f"RSS验证结果: {'有效' if validation['valid'] else '无效'}")
 ```
 ### PowerShell
@@ -210,7 +210,7 @@ if __name__ == "__main__":
 class RSSApiClient {
     [string]$BaseUrl
     
-    RSSApiClient([string]$baseUrl = "http://rss-api.hvhbbs.cc") {
+    RSSApiClient([string]$baseUrl = "http://rss-api.mahiro.work") {
         $this.BaseUrl = $baseUrl
     }
     
@@ -398,7 +398,7 @@ class RobustRSSClient extends RSSApiClient {
 
 ## 🤝 支持
 
-- **API文档**: https://docs.hvhbbs.cc
+- **API文档**: https://docs.mahiro.work
 - **邮箱支持**: mhya123@lovemh.me
 
 ---

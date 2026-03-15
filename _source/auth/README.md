@@ -2,7 +2,7 @@
 
 ## 基础信息
 
-- **接口地址**: `https://auth.hvhbbs.cc/?action=login`
+- **接口地址**: `https://auth.mahiro.work/?action=login`
 - **请求方式**: `POST`
 - **Content-Type**: `application/x-www-form-urlencoded`
 - **响应格式**: `JSON`
@@ -23,7 +23,7 @@
 #### 请求示例
 
 ```bash
-curl -X POST "https://auth.hvhbbs.cc/?action=login" \
+curl -X POST "https://auth.mahiro.work/?action=login" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "login=username&password=userpassword"
 ```
@@ -36,7 +36,7 @@ const loginData = {
     password: 'user_password'
 };
 
-fetch('https://auth.hvhbbs.cc/?action=login', {
+fetch('https://auth.mahiro.work/?action=login', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -61,7 +61,7 @@ $loginData = [
 ];
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://auth.hvhbbs.cc/?action=login');
+curl_setopt($ch, CURLOPT_URL, 'https://auth.mahiro.work/?action=login');
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($loginData));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

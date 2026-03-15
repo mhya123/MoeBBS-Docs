@@ -7,7 +7,7 @@
 
 ### 接口地址
 ```
-https://api.hvhbbs.cc/
+https://api.mahiro.work/
 ```
 
 ### 请求方式
@@ -39,15 +39,15 @@ GET /?action=get_thread&thread_id={thread_id}
 **请求示例**:
 ```bash
 # cURL 示例
-curl -X GET "https://api.hvhbbs.cc/?action=get_thread&thread_id=123"
+curl -X GET "https://api.mahiro.work/?action=get_thread&thread_id=123"
 
 # JavaScript fetch 示例
-fetch('https://api.hvhbbs.cc/?action=get_thread&thread_id=123')
+fetch('https://api.mahiro.work/?action=get_thread&thread_id=123')
   .then(response => response.json())
   .then(data => console.log(data));
 
 # PHP 示例
-$url = 'https://api.hvhbbs.cc/?action=get_thread&thread_id=123';
+$url = 'https://api.mahiro.work/?action=get_thread&thread_id=123';
 $response = file_get_contents($url);
 $data = json_decode($response, true);
 ```
@@ -94,16 +94,16 @@ GET /?action=get_resource_version&resource_version_id={version_id}
 **请求示例**:
 ```bash
 # cURL 示例
-curl -X GET "https://api.hvhbbs.cc/?action=get_resource_version&resource_version_id=456"
+curl -X GET "https://api.mahiro.work/?action=get_resource_version&resource_version_id=456"
 
 # JavaScript fetch 示例
-fetch('https://api.hvhbbs.cc/?action=get_resource_version&resource_version_id=456')
+fetch('https://api.mahiro.work/?action=get_resource_version&resource_version_id=456')
   .then(response => response.json())
   .then(data => console.log(data));
 
 # Python requests 示例
 import requests
-response = requests.get('https://api.hvhbbs.cc/?action=get_resource_version&resource_version_id=456')
+response = requests.get('https://api.mahiro.work/?action=get_resource_version&resource_version_id=456')
 data = response.json()
 ```
 
@@ -147,17 +147,17 @@ GET /?action=find_user_by_email&email={email}
 **请求示例**:
 ```bash
 # cURL 示例
-curl -X GET "https://api.hvhbbs.cc/?action=find_user_by_email&email=tuder1218@gmail.com"
+curl -X GET "https://api.mahiro.work/?action=find_user_by_email&email=tuder1218@gmail.com"
 
 # JavaScript fetch 示例（注意 URL 编码）
 const email = encodeURIComponent('tuder1218@gmail.com');
-fetch(`https://api.hvhbbs.cc/?action=find_user_by_email&email=${email}`)
+fetch(`https://api.mahiro.work/?action=find_user_by_email&email=${email}`)
   .then(response => response.json())
   .then(data => console.log(data));
 
 # Java 示例
 String email = URLEncoder.encode("tuder1218@gmail.com", "UTF-8");
-String url = "https://api.hvhbbs.cc/?action=find_user_by_email&email=" + email;
+String url = "https://api.mahiro.work/?action=find_user_by_email&email=" + email;
 // 使用 HttpClient 发送请求
 ```
 
@@ -212,12 +212,12 @@ Content-Type: application/x-www-form-urlencoded
 **请求示例**:
 ```bash
 # cURL 示例
-curl -X POST "https://api.hvhbbs.cc/?action=" \
+curl -X POST "https://api.mahiro.work/?action=" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "to_user_id=123&alert=您有新的消息&from_user_id=456&link_url=https://example.com&link_title=查看详情"
 
 # JavaScript fetch 示例
-fetch('https://api.hvhbbs.cc/?action=', {
+fetch('https://api.mahiro.work/?action=', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded',
@@ -251,7 +251,7 @@ $options = [
 ];
 
 $context = stream_context_create($options);
-$result = file_get_contents('https://api.hvhbbs.cc/?action=', false, $context);
+$result = file_get_contents('https://api.mahiro.work/?action=', false, $context);
 $response = json_decode($result, true);
 ```
 
@@ -424,7 +424,7 @@ class ApiCache {
                 "method": "GET",
                 "header": [],
                 "url": {
-                    "raw": "https://api.hvhbbs.cc/?action=get_thread&thread_id=123",
+                    "raw": "https://api.mahiro.work/?action=get_thread&thread_id=123",
                     "host": ["api", "hvhbbs", "cc"],
                     "path": [""],
                     "query": [
@@ -443,7 +443,7 @@ class ApiCache {
 #!/bin/bash
 # test_api.sh
 
-BASE_URL="https://api.hvhbbs.cc/"
+BASE_URL="https://api.mahiro.work/"
 
 echo "Testing Get Thread API..."
 curl -s "$BASE_URL?action=get_thread&thread_id=123" | jq .
@@ -461,7 +461,7 @@ curl -s -X POST "$BASE_URL?action=" \
 # test_api.bat
 
 @echo off
-set BASE_URL=https://api.hvhbbs.cc/
+set BASE_URL=https://api.mahiro.work/
 
 echo Testing Get Thread API...
 curl -s "%BASE_URL%?action=get_thread&thread_id=123"
